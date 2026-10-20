@@ -1,0 +1,276 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&display=swap');
+
+/* Colores reutilizables de toda la página. */
+:root {
+	--ink: #101216;
+	--paper: #f1f4f5;
+	--navy: #111923;
+	--muted: #c5c9ce;
+	--line: #c7cccf;
+	--accent: #f6bc4c;
+}
+
+/* Hace que el tamaño final de los elementos incluya padding y borde. */
+* {
+	box-sizing: border-box;
+}
+
+/* Desplazamiento suave al navegar mediante enlaces internos. */
+html {
+	scroll-behavior: smooth;
+}
+
+/* Estilos generales del documento. */
+body {
+	min-height: 100vh;
+	margin: 0;
+	background: var(--paper);
+	color: var(--ink);
+	font-family: 'Oswald', sans-serif;
+	font-size: 1.2rem;
+}
+
+/* Apariencia compartida por la cabecera y el pie de página. */
+.site-header,
+footer {
+	width: calc(100% - 2rem);
+	margin: 0 auto;
+	background: var(--navy);
+	color: var(--muted);
+	box-shadow: 0 8px 18px rgb(10 15 20 / 18%);
+}
+
+/* Distribuye la marca y el menú horizontalmente. */
+.site-header {
+	min-height: 100px;
+	padding: 1.25rem max(2rem, calc((100% - 1010px) / 2));
+	border-radius: 0 0 13px 13px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 2rem;
+}
+
+/* Nombre y logotipo textual de DevNews. */
+.brand {
+	color: #e8e9eb;
+	font-size: 2.2rem;
+	font-weight: 700;
+	text-decoration: none;
+}
+
+/* Rayo decorativo situado junto al nombre del sitio. */
+.brand-mark {
+	display: inline-block;
+	margin-left: .4rem;
+	color: var(--accent);
+	font-size: 2.5rem;
+	transform: rotate(-8deg);
+}
+
+/* Menú de navegación construido con Flexbox. */
+nav {
+	display: flex;
+	align-items: center;
+	gap: .8rem;
+}
+
+/* Estilo base de todos los enlaces. */
+a {
+	color: inherit;
+	text-underline-offset: .15em;
+}
+
+/* Enlaces específicos del menú principal. */
+nav a {
+	color: var(--muted);
+	font-size: 1.35rem;
+	text-decoration: none;
+}
+
+/* Subraya el enlace activo o aquel sobre el que está el cursor. */
+nav a:hover,
+nav a.active {
+	text-decoration: underline;
+}
+
+/* Organiza el contenido principal en dos columnas con Flexbox. */
+main {
+	width: min(1010px, calc(100% - 4rem));
+	margin: 2.5rem auto 2rem;
+	display: flex;
+	align-items: flex-start;
+	gap: 2.2rem;
+}
+
+/* La columna de artículos ocupa el espacio disponible. */
+.articles {
+	flex: 1 1 0;
+	min-width: 0;
+}
+
+/* Cada noticia tiene una línea inferior para separarla de la siguiente. */
+article {
+	padding: 0 0 1rem;
+	border-bottom: 1px solid var(--line);
+}
+
+/* Añade separación superior a partir del segundo artículo. */
+article + article {
+	padding-top: .7rem;
+}
+
+/* Reinicia el margen superior de los títulos y párrafos. */
+h1,
+h2,
+p {
+	margin-top: 0;
+}
+
+/* Título de cada noticia. */
+article h2 {
+	margin-bottom: 0;
+	font-size: clamp(1.65rem, 3vw, 2.1rem);
+	line-height: 1.15;
+}
+
+/* Texto descriptivo de cada noticia. */
+article p {
+	margin-bottom: .15rem;
+	line-height: 1.25;
+}
+
+/* Texto que identifica autora y fecha. */
+.metadata {
+	font-size: 1.15rem;
+}
+
+/* Evita espacio adicional después de la categoría. */
+.category {
+	margin-bottom: 0;
+}
+
+/* Columna secundaria con información de la autora y enlaces. */
+aside {
+	flex: 0 1 245px;
+	padding-top: 4.3rem;
+}
+
+/* Títulos de las secciones de la barra lateral. */
+aside h2 {
+	margin-bottom: .8rem;
+	font-size: 1.35rem;
+	line-height: 1.05;
+	text-transform: uppercase;
+}
+
+/* Alinea la imagen/insignia y los datos de la autora. */
+.author-details {
+	display: flex;
+	align-items: center;
+	gap: .8rem;
+	margin-bottom: 2rem;
+	line-height: 1.35;
+}
+
+/* Destaca el nombre de la autora. */
+.author-details strong {
+	font-size: 1.4rem;
+}
+
+/* Avatar circular representado con las iniciales de la autora. */
+.author-avatar {
+	width: 60px;
+	height: 60px;
+	display: grid;
+	place-items: center;
+	flex: 0 0 60px;
+	border-radius: 50%;
+	background: #8c9799;
+	color: #fff;
+	font-size: 1.1rem;
+	font-weight: 600;
+}
+
+/* Espaciado y sangría de la lista de enlaces recomendados. */
+.recommended ul {
+	margin: 0;
+	padding-left: 1.5rem;
+}
+
+/* Separa verticalmente los elementos de la lista. */
+.recommended li {
+	margin-bottom: .75rem;
+}
+
+/* Pie de página con fondo oscuro, bordes redondeados y texto centrado. */
+footer {
+	min-height: 78px;
+	padding: 1.4rem;
+	border-radius: 13px;
+	text-align: center;
+}
+
+/* El párrafo del pie no necesita margen adicional. */
+footer p {
+	margin: 0;
+}
+
+/* Oculta visualmente el título principal, pero lo conserva para lectores de pantalla. */
+.visually-hidden {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	white-space: nowrap;
+	border: 0;
+}
+
+/* Adaptaciones para pantallas pequeñas, como teléfonos. */
+@media (max-width: 700px) {
+	/* La cabecera pasa a ocupar varias filas. */
+	.site-header {
+		padding: 1rem 1.25rem;
+		align-items: flex-start;
+		flex-direction: column;
+	}
+
+	/* Reduce el tamaño de la marca en móviles. */
+	.brand {
+		font-size: 1.9rem;
+	}
+
+	/* El menú ocupa todo el ancho disponible. */
+	nav {
+		width: 100%;
+		justify-content: space-between;
+		gap: .45rem;
+	}
+
+	/* Reduce el tamaño de los enlaces del menú. */
+	nav a {
+		font-size: 1.1rem;
+	}
+
+	/* Las dos columnas se apilan verticalmente. */
+	main {
+		width: calc(100% - 2.5rem);
+		margin-top: 1.7rem;
+		flex-direction: column;
+	}
+
+	/* La barra lateral ocupa todo el ancho. */
+	aside {
+		width: 100%;
+		padding-top: 0;
+	}
+
+	/* Ajusta el ancho y el texto del pie en móviles. */
+	footer {
+		width: calc(100% - 1.5rem);
+		font-size: 1rem;
+	}
+}

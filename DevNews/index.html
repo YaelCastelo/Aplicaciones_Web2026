@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- Configuración básica de la página y enlace con la hoja de estilos. -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="DevNews, noticias y artículos sobre desarrollo web.">
+    <title>DevNews | Artículos de desarrollo web</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Cabecera: contiene la identidad del sitio y el menú principal. -->
+    <header class="site-header">
+        <a class="brand" href="index.html" aria-label="DevNews, página de inicio">
+            <span>DevNews</span><span class="brand-mark" aria-hidden="true">⚡</span>
+        </a>
+        <!-- Navegación principal con enlaces a las zonas importantes de la página. -->
+        <nav aria-label="Navegación principal">
+            <a href="index.html">Inicio</a>
+            <span aria-hidden="true">|</span>
+            <a class="active" href="#articulos" aria-current="page">Artículos</a>
+            <span aria-hidden="true">|</span>
+            <a href="#contacto">Contacto</a>
+        </nav>
+    </header>
+
+    <!-- Contenido principal: artículos a la izquierda y barra lateral a la derecha. -->
+    <main>
+        <!-- Lista de noticias o artículos publicados. -->
+        <section class="articles" id="articulos" aria-labelledby="articles-title">
+            <h1 id="articles-title" class="visually-hidden">Artículos de desarrollo web</h1>
+            <!-- Primer artículo del sitio. -->
+            <article>
+                <h2>¿Por qué usar HTML5 Semántico?</h2>
+                <p class="metadata">Laura Gómez · 23 Sep 2026</p>
+                <p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore. Ut enim ad minim veniam, quis nostrud arono reenecto labor nisi nisi ohamo ut aliquip ea commodo, eutes oluptate voluopt.erte commodo consequat.</p>
+                <p class="category"><strong>Categoría:</strong> <a href="#programacion-web">Programación Web</a></p>
+            </article>
+
+            <!-- Segundo artículo del sitio. -->
+            <article>
+                <h2>Dominando CSS Grid para Layouts Complejos</h2>
+                <p class="metadata">Laura Gómez · 25 Sep 2026</p>
+                <p>Exploraremos cómo grid-template-areas y grid-column pueden transformar la maquetación web. El control que ofrece es incomparable...</p>
+                <p class="category"><strong>Categoría:</strong> <a href="#css">CSS</a></p>
+            </article>
+
+            <!-- Tercer artículo del sitio. -->
+            <article>
+                <h2>Introducción a JavaScript Asíncrono</h2>
+                <p class="metadata">Laura Gómez · 28 Sep 2026</p>
+                <p>Entender promesas y async/await es crucial para construir aplicaciones web modernas y reactivas. Desmitificaremos el bucle de eventos...</p>
+                <p class="category"><strong>Categoría:</strong> <a href="#javascript">JavaScript</a></p>
+            </article>
+        </section>
+
+        <!-- Información complementaria que acompaña a los artículos. -->
+        <aside>
+            <!-- Presentación breve de la autora. -->
+            <section class="author" aria-labelledby="author-title">
+                <h2 id="author-title">Sobre la autora</h2>
+                <p class="author-details">
+                    <span class="author-avatar" aria-hidden="true">LG</span>
+                    <span><strong>Laura</strong><br>Frontend Dev</span>
+                </p>
+            </section>
+            <!-- Enlaces relacionados recomendados para el lector. -->
+            <section class="recommended" aria-labelledby="recommended-title">
+                <h2 id="recommended-title">Enlaces recomendados</h2>
+                <ul>
+                    <li><a href="#flexbox">CSS Flexbox</a></li>
+                    <li><a href="#accesibilidad">Accesibilidad Web</a></li>
+                    <li><a href="#semantico">Desarrollo Semántico</a></li>
+                </ul>
+            </section>
+        </aside>
+    </main>
+
+    <!-- Pie de página con la información de copyright. -->
+    <footer id="contacto">
+        <p>© 2026 DevNews - Ejercicio de Clase</p>
+    </footer>
+</body>
+</html>
