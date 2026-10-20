@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portafolio personal de Julio Castelo: proyectos académicos de desarrollo web.">
+  <title>Julio Castelo | Portafolio personal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="navbar container" aria-label="Navegación principal">
+      <a class="logo" href="#inicio">Julio Castelo</a>
+      <ul class="nav-links">
+        <li><a href="#proyectos">Proyectos</a></li>
+        <li><a href="#sobre-mi">Sobre mí</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+      <a class="btn btn-primary" href="#contacto">Contacto</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="inicio" class="hero container" aria-labelledby="hero-title">
+      <p class="caption accent">Estudiante de desarrollo web</p>
+      <h1 id="hero-title">Hola, soy Julio Castelo</h1>
+      <p class="hero-text">Construyo sitios y aplicaciones web con HTML, CSS. Aquí encontrarás los proyectos académicos que he desarrollado.</p>
+      <div class="actions">
+        <a class="btn btn-primary" href="#proyectos">Ver Proyecto</a>
+        <a class="btn btn-secondary" href="assets/cv.pdf" download>Descargar CV</a>
+      </div>
+    </section>
+
+    <section id="proyectos" class="section container" aria-labelledby="proyectos-title">
+      <header class="section-head">
+        <h2 id="proyectos-title">Proyectos</h2>
+        <p class="muted">Trabajos académicos recientes</p>
+      </header>
+      <div class="projects-grid">
+        <article class="card">
+          <img src="assets/img/proyecto-flextech.png" alt="Captura de la página FlexTech con una barra de navegación oscura y cuatro tarjetas de servicios" width="1280" height="720">
+          <div class="card-body">
+            <h3>FlexTech: página de servicios</h3>
+            <p class="muted">Sitio para una empresa de tecnología con menú superior y tarjetas de servicios alineadas con Flexbox.</p>
+            <ul class="badges" aria-label="Tecnologías utilizadas"><li>HTML</li><li>CSS</li></ul>
+            <div class="actions">
+              <a class="btn btn-primary" href="#">Ver Proyecto</a>
+              <a class="btn btn-secondary" href="https://github.com/YaelCastelo/Aplicaciones_Web2026.git" target="_blank" rel="noopener">GitHub</a>
+            </div>
+          </div>
+        </article>
+        <article class="card">
+          <img src="assets/img/proyecto-airbnb.png" alt="Captura de la réplica de Airbnb con alojamientos populares en Mazatlán" width="1280" height="720">
+          <div class="card-body">
+            <h3>Réplica de Airbnb</h3>
+            <p class="muted">Portada inspirada en Airbnb con barra superior y filas horizontales de alojamientos por ciudad.</p>
+            <ul class="badges" aria-label="Tecnologías utilizadas"><li>HTML</li><li>CSS</li></ul>
+            <div class="actions">
+              <a class="btn btn-primary" href="#">Ver Proyecto</a>
+              <a class="btn btn-secondary" href="https://github.com/YaelCastelo/Aplicaciones_Web2026.git" target="_blank" rel="noopener">GitHub</a>
+            </div>
+          </div>
+        </article>
+        <article class="card">
+          <img src="assets/img/proyecto-devnews.png" alt="Captura del blog DevNews con lista de artículos y barra lateral de la autora" width="1280" height="720">
+          <div class="card-body">
+            <h3>DevNews: blog para desarrolladores</h3>
+            <p class="muted">Blog con artículos, barra lateral sobre la autora y enlaces recomendados, hecho con etiquetas semánticas.</p>
+            <ul class="badges" aria-label="Tecnologías utilizadas"><li>HTML5</li><li>CSS</li></ul>
+            <div class="actions">
+              <a class="btn btn-primary" href="#">Ver Proyecto</a>
+              <a class="btn btn-secondary" href="https://github.com/YaelCastelo/Aplicaciones_Web2026.git" target="_blank" rel="noopener">GitHub</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="sobre-mi" class="about" aria-labelledby="sobre-title">
+      <div class="about-inner container">
+        <img class="avatar" src="assets/img/perfil.svg" alt="Foto de perfil de Julio Castelo" width="200" height="200">
+        <div>
+          <h2 id="sobre-title">Sobre mí</h2>
+          <p class="muted">Soy estudiante apasionado por el desarrollo web. Me interesa crear interfaces claras y accesibles, y aprender nuevas tecnologías con cada proyecto.</p>
+          <h3 class="skills-title">Habilidades y herramientas</h3>
+          <ul class="badges" aria-label="Habilidades"><li>HTML</li><li>CSS</li><li>SQL</li><li>Python</li><li>Git</li><li>Figma</li></ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="contacto" class="section container contact" aria-labelledby="contacto-title">
+      <h2 id="contacto-title">Contacto</h2>
+      <p class="muted">¿Tienes una idea o propuesta? Escríbeme.</p>
+      
+      <form class="contact-form" id="contactForm" onsubmit="enviarAGmail(event)">
+        <label for="nombre">Nombre</label>
+        <input id="nombre" name="nombre" type="text" autocomplete="name" required>
+        
+        <label for="correo">Correo</label>
+        <input id="correo" name="correo" type="email" autocomplete="email" required>
+        
+        <label for="mensaje">Mensaje</label>
+        <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+        
+        <button class="btn btn-primary" type="submit">Escríbeme</button>
+      </form>
+    </section>
+
+    <script>
+    function enviarAGmail(event) {
+      // Evita que el formulario recargue la página
+      event.preventDefault();
+
+      // Correo de destino
+      const correoDestino = "julio.castelo270254@potros.itson.edu.mx";
+
+      // Obtenemos lo que escribió el usuario en los campos
+      const nombre = document.getElementById("nombre").value;
+      const correo = document.getElementById("correo").value;
+      const mensaje = document.getElementById("mensaje").value;
+
+      // Formateamos el asunto y el mensaje
+      const asunto = encodeURIComponent(`Nuevo mensaje de contacto de ${nombre}`);
+      const cuerpo = encodeURIComponent(`Nombre: ${nombre}\nCorreo de contacto: ${correo}\n\nMensaje:\n${mensaje}`);
+
+      // URL para redactar directamente en la interfaz web de Gmail
+      const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${correoDestino}&su=${asunto}&body=${cuerpo}`;
+
+      // Abre Gmail en una nueva pestaña
+      window.open(gmailUrl, '_blank');
+    }
+    </script>
+      <ul class="social">
+        <li><a class="btn btn-secondary" href="https://github.com/YaelCastelo/Aplicaciones_Web2026.git" target="_blank" rel="noopener"><img src="assets/icons/github.svg" alt="" width="20" height="20">GitHub</a></li>
+        <li><a class="btn btn-secondary" href="https://www.linkedin.com/" target="_blank" rel="noopener"><img src="assets/icons/linkedin.svg" alt="" width="20" height="20">LinkedIn</a></li>
+        <li>
+          <a class="btn btn-secondary" href="https://mail.google.com/mail/?view=cm&fs=1&to=julio.castelo270254@potros.itson.edu.mx" target="_blank" rel="noopener noreferrer">
+            <img src="assets/icons/mail.svg" alt="" width="20" height="20"> Correo
+          </a>
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p class="caption muted">© 2026 Julio Castelo · Portafolio personal</p>
+  </footer>
+</body>
+</html>
